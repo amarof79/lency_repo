@@ -1,0 +1,48 @@
+name: Sign In Test
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+permissions:
+      id-token: write
+      contents: read
+      
+jobs:
+  build:
+    name: Windows Build
+    runs-on: windows-latest 
+    
+    # defaults:
+    #   run: 
+    #     shell: bash
+    #     working-directory: shay_repo
+
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v2
+        
+      - name: OIDC Login to Azure Public Cloud with AzPowershell (enableAzPSSession true)
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
+          enable-AzPSSession: true
+          
+      # - name: Install Modules
+      #   run: |
+      #     npm install 
+
+      - name: Run PS1 Script
+        run: 
+        # run: | 
+        #   chmod +x ./createFunctionApp/createFunctionApp.js
+        #   node ./createFunctionApp/createFunctionApp.js
