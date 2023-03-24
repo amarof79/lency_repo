@@ -22,7 +22,7 @@ jobs:
     # defaults:
     #   run: 
     #     shell: bash
-    #     working-directory: shay_repo
+    #     working-directory: shay_repo 
 
     steps:
       - name: Checkout Action
