@@ -41,8 +41,5 @@ jobs:
       #   run: |
       #     npm install 
 
-      # - name: Run PS1 Script
-      #   run: 
-        # run: | 
-        #   chmod +x ./createFunctionApp/createFunctionApp.js
-        #   node ./createFunctionApp/createFunctionApp.js
+      - name: Run PS1 Script
+        run: ./azure_scripts/signin.ps1
