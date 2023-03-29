@@ -27,7 +27,7 @@ try {
 } catch {
 
     New-AzStorageContainer -Name "testing123" -Context $context
-    Set-AzStorageBlobContent -Blob "urmom.txt" -Container "testing123" -File "./azure_scripts/urmom.txt"
+    Set-AzStorageBlobContent -Blob "urmom.txt" -Container "testing123" -File "./azure_scripts/urmom.txt" -Context $context
 
 }
 
