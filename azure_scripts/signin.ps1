@@ -23,11 +23,11 @@ $account_key = "Kknhm690Wcrx+qJi3V8ENyl9BTxo4TVYqixPK3rgjvwMqcUAE3RUJA7a009ESaNQ
 $context = New-AzStorageContext -StorageAccountName $account_name -StorageAccountKey $account_key
 
 try {
-    Get-AzStorageBlob -Container "testing" -Blob "urmom.txt" -Context $context
+    Get-AzStorageBlob -Container "testing123" -Blob "urmom.txt" -Context $context
 } catch {
 
-    New-AzStorageContainer -Name "testing" -Context $context
-    Set-AzStorageBlobContent -Blob "urmom.txt" -Container "testing" -File "./azure_scripts/urmom.txt"
+    New-AzStorageContainer -Name "testing123" -Context $context
+    Set-AzStorageBlobContent -Blob "urmom.txt" -Container "testing123" -File "./azure_scripts/urmom.txt"
 
 }
 
