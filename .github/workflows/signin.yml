@@ -18,11 +18,6 @@ jobs:
   build:
     name: Windows Build
     runs-on: windows-latest 
-    
-    # defaults:
-    #   run: 
-    #     shell: bash
-    #     working-directory: shay_repo 
 
     steps:
       - name: Checkout Action
