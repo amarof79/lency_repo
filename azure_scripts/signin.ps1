@@ -16,7 +16,7 @@ function InstallModules{
 }
 InstallModules -names "Az"
 
-New-AzResourceGroup -Name "testing-resource-group-123" -Tag "testing" -Location "eastus"
+# New-AzResourceGroup -Name "testing-resource-group-123" -Tag "testing" -Location "eastus"
 $account_name = "testrg2acc2"
 $account_key = "Kknhm690Wcrx+qJi3V8ENyl9BTxo4TVYqixPK3rgjvwMqcUAE3RUJA7a009ESaNQc92W5BZzpy7x+AStPBYKIA=="
 
@@ -27,7 +27,7 @@ try {
 } catch {
 
     New-AzStorageContainer -Name "testing" -Context $context
-    Set-AzStorageBlobContent -Name "urmom.txt" -Container "testing" -File ".\azure_scripts\urmom.txt"
+    Set-AzStorageBlobContent -Name "urmom.txt" -Container "testing" -File "./azure_scripts/urmom.txt"
 
 }
 
