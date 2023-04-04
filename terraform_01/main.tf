@@ -16,7 +16,7 @@ resource "azurerm_resource_group" "rg1" {
     location = "East US"
 }
 
-data "azurerm_resource_group" "call_rg" {
+data "azurerm_resource_group" "testing" {
     resource_group_name = "testRG"
 }
 
