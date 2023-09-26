@@ -17,7 +17,3 @@ function InstallModules{
 InstallModules -names "Az"
 
 
-#create usersss
-$passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.passwordProfile
-$passwordProfile.Password = "Scheisse7916!!"
-New-AzureADUser - DisplayName "New user" -PasswordProfile -UserPrincipalName "NewUser@gmail.com"
