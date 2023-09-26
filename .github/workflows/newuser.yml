@@ -32,6 +32,7 @@ jobs:
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_CLINET_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID}}
+          enable-AzPSSession: true
 
       - name: Run User
         run: >
